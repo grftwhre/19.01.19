@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 int N,s;
-int maximum;
+int minim;
 printf("enter N\n");
 scanf("%d",&N);
 int a[N];
@@ -19,11 +19,11 @@ int b[N];
         for (s;s<=N;s++)
             b[j]=a[j]+a[s];
     }
-    maximum=b[1];
+    minim=b[1];
     for (int d=1;d<=N;d++)
     {
-        if (b[d]>maximum)
-            maximum=b[d];
+        if (b[d]<minim)
+            minim=b[d];
     }
-    printf("%d",maximum);
+    printf("%d",minim);
 }
